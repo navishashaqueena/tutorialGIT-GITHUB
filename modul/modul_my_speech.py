@@ -1,16 +1,16 @@
 import speech_recognition as sr
 
-bicara = sr.Recognizer()
+ngomong = sr.Recognizer()
 
 
 def suaraKeTeks():
     while True:
-        voice_input = ''
+        suara_input = ''
         with sr.Microphone() as sumber:
-            bicara.adjust_for_ambient_noise(source=sumber)
+            ngomong.adjust_for_ambient_noise(source=sumber)
             try:
-                audio = bicara.listen(source=sumber)
-                voice_input = bicara.recognize_google(
+                audio = ngomong.listen(source=sumber)
+                suara_input = ngomong.recognize_google(
                     audio_data=audio, language='id-ID')
             except sr.UnknownValueError as uve:
                 print(
@@ -21,4 +21,4 @@ def suaraKeTeks():
             except sr.WaitTimeoutError as wte:
                 print(
                     f'skrip tidak mendeteksi audio apa pun dari mikrofon untuk waktu yang lama {wte}')
-        return voice_input
+        return suara_input

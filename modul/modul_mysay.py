@@ -10,5 +10,5 @@ if platform.system() == 'Windows':
         print('Error Import')
     except RuntimeError:
         print('Error Runtime')
-    voices = engine.getProperty('voices')
-    engine.setProperty(voices)
+    suara = engine.getProperty('suara')
+    engine.setProperty(suara)
