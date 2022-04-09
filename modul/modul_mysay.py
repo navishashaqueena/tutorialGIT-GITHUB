@@ -1,7 +1,7 @@
 # identifikasi platform
 import platform
 
-# jika platform windows menggunakan pyttsx
+# jika platform windows menggunakan pyttsx okehhhhhhhhhhhhhhhhhhhh
 if platform.system() == 'Windows':
     import pyttsx3
     try:
